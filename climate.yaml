@@ -1,0 +1,9 @@
+  - platform: generic_thermostat
+    name: room3_heating
+    heater: switch.r3_heat
+    target_sensor: sensor.r3_curtemp
+    min_temp: 5
+    max_temp: 28
+    ac_mode: false
+    initial_hvac_mode: "heat"
+    precision: 1.0

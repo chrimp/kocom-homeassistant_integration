@@ -1,0 +1,47 @@
+  - platform: command_line
+    scan_interval: 120
+    name: l1_curtemp
+    command: "python3 /root/.homeassistant/scs/chocopy.py gettemp L1 cur"
+    unit_of_measurement: °C
+  
+  - platform: command_line
+    scan_interval: 120
+    name: l1_settemp
+    command: "python3 /root/.homeassistant/scs/chocopy.py gettemp L1 set"
+    unit_of_measurement: °C
+  
+  - platform: command_line
+    scan_interval: 120
+    name: r1_curtemp
+    command: "python3 /root/.homeassistant/scs/chocopy.py gettemp R1 cur"
+    unit_of_measurement: °C
+  
+  - platform: command_line
+    scan_interval: 120
+    name: r1_settemp
+    command: "python3 /root/.homeassistant/scs/chocopy.py gettemp R1 set"
+    unit_of_measurement: °C
+  
+  - platform: command_line
+    scan_interval: 120
+    name: r2_curtemp
+    command: "python3 /root/.homeassistant/scs/chocopy.py gettemp R2 cur"
+    unit_of_measurement: °C
+  
+  - platform: command_line
+    scan_interval: 120
+    name: r2_settemp
+    command: "python3 /root/.homeassistant/scs/chocopy.py gettemp R2 set"
+    unit_of_measurement: °C
+
+  - platform: command_line
+    scan_interval: 120
+    name: r3_curtemp
+    command: "python3 /root/.homeassistant/scs/chocopy.py gettemp R3 cur"
+    unit_of_measurement: °C
+
+  - platform: command_line
+    scan_interval: 120
+    name: r3_settemp
+    command: "python3 /root/.homeassistant/scs/chocopy.py gettemp R3 set"
+    unit_of_measurement: °C

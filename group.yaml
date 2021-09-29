@@ -1,0 +1,47 @@
+l:
+  name: 거실
+  entities:
+    - switch.l1_1
+    - switch.l1_2
+    - switch.l1_3
+    - switch.l1_heat
+    - sensor.l1_curtemp
+    - sensor.l1_settemp
+
+r1:
+  name: 방1
+  entities:
+    - switch.r1_1
+    - switch.r1_2
+    - switch.r1_heat
+    - sensor.r1_curtemp
+    - sensor.r1_settemp
+r2:
+  name: 방2
+  entities:
+    - switch.r2
+    - switch.r2_heat
+    - sensor.r2_curtemp
+    - sensor.r2_settemp
+
+r3:
+  name: 방3
+  entities:
+    - switch.r3
+    - switch.r3_heat
+    - sensor.r3_curtemp
+    - sensor.r3_settemp
+
+r4:
+  name: 방4
+  entities:
+    - switch.r4_1
+    - switch.r4_2
+    - switch.r4_3
+    - switch.home_gas
+
+home:
+  name: 공조기
+  entities:
+    - switch.home_fan
+  
