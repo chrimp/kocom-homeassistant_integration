@@ -50,7 +50,6 @@ class StopWatch:
 timer = StopWatch()
 
 
-"""
 bs = 32
 pad = lambda s: s + (bs - len(s.encode('utf-8')) % bs) * chr (bs - len(s.encode('utf-8')) % bs)
 unpad = lambda s: s[:-ord(s[len(s)-1:])]
@@ -103,7 +102,7 @@ def decrypt_test():
         pw_dbc = pickle.load(f)
     pw_adc = AESset(bytes(retain_key)).decrypt(pw_dbc)
     print(pw_adc)
-"""
+
 
 def firstlaunch(errorcheck):
     while errorcheck == 1:

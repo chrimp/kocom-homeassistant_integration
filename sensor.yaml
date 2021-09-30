@@ -1,3 +1,5 @@
+########## Replace ALL PATH to chocopy.py file! ##########
+
   - platform: command_line
     scan_interval: 120
     name: l1_curtemp

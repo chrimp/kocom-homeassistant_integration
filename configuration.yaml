@@ -12,25 +12,18 @@ tts:
 lovelace:
   mode: yaml
 
-
-#http:
-#  ssl_certificate: /root/cert.pem
-#  ssl_key: /root/key.pem
-
 switch: !include switch.yaml
 sensor: !include sensor.yaml
 climate: !include climate.yaml
 group: !include group.yaml
 fan: !include fan.yaml
 
+######## Replace path to chocopy.py file
 shell_command:
   set_heatingtemp: "/root/.homeassistant/scs/chocopy.py R3H settemp {{ state_attr('climate.room3_heating', 'temperature') | int }}"
   fanspd1: "/root/.homeassistant/scs/chocopy.py fan setspd 1"
   fanspd2: "/root/.homeassistant/scs/chocopy.py fan setspd 2"
   fanspd3: "/root/.homeassistant/scs/chocopy.py fan setspd 3"
-  #r2_on: /root/.homeassistant/scs/chocopy.py R2 on 10 {{ states('input_text.something_hidden') }}
-  #r2_off: /root/.homeassistant/scs/chocopy.py R2 off 10 {{ states('input_text.something_hidden') }}
-  #r2_state: /root/.homeassistant/scs/chocopy.py R2 status R2 {{ states('input_text.something_hidden') }}
 
 homekit:
   filter:
@@ -43,47 +36,9 @@ homekit:
       - command_line_sensor.r3_curtemp
       - command_line_sensor.r3_settemp
 
-#automation:
-  #trigger:
-    #platform: homeassistant
-   # event: start
-  #action:
-   # service: homeassistant.update_entity
-   # entity_id:
-     # - switch.l1_1
-     # - switch.l1_2
-     # - switch.l1_3
-     # - switch.r1_1
-     # - switch.r1_2
-     # - switch.r2
-     # - switch.r3
-     # - switch.r4_1
-     # - switch.r4_2
-     # - switch.r4_3
-     # - switch.l1_heat
-     # - switch.r1_heat
-     # - switch.r2_heat
-     # - switch.r3_heat
-
 automation 2:
   trigger:
     platform: state
     entity_id: climate.room3_heating
   action:
     service: shell_command.set_heatingtemp
-
-#automation 3:
-  #trigger:
-    #platform: homeassistant
-    #event: start
-  #action:
-    #service: homeassistant.update_entity
-    #entity_id:
-      #- sensor.l1_curtemp
-      #- sensor.l1_settemp
-      #- sensor.r1_curtemp
-      #- sensor.r1_settemp
-      #- sensor.r2_curtemp
-      #- sensor.r2_settemp
-     # - sensor.r3_curtemp
-      #- sensor.r3_settemp
